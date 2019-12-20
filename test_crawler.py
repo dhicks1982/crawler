@@ -12,6 +12,9 @@ class CrawlerTest(unittest.TestCase):
         results = crawler.get_links_from_url("https://www.google.com")
         self.assertGreater(len(results), 3)
 
+    def test_simple_run(self):
+        crawler.parallel_crawl("https://www.google.com")
+
 
 if __name__ == '__main__':
     unittest.main()
